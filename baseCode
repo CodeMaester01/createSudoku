@@ -1,2 +1,35 @@
-//Creating a double array to store values
-int grid[][] = new int[9][9];
+package code;
+
+import java.lang.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+public class baseCode {
+	
+	public static void main(String[] args) {
+		//Creating a double array to store values
+		int grid[][] = new int[9][9];
+		Random randomNum = new Random();
+		for(int r = 0; r < 9; r++ ) {
+			int numCount = 0; //initial idea, ensure there's 3-4 nums in each row so it's solvable. 
+							  //Code for it is in now, but doesn't work too well, to be replaced
+			for(int c = 0; c < 9; c++) {
+				//for each location we need to figure out wheather we want to put a num in it or not
+				if(numCount <= 4) {
+					grid[r][c] = randomNum.nextInt(9); //adds random num to location
+					numCount++;
+				}
+			}
+		}
+
+		//prints the grid, will be replaced with jPanels when those work
+		for(int r = 0; r < 9; r++) {
+			for(int c = 0; c < 9; c++) {
+				System.out.print(grid[r][c] + " ");
+			}
+			System.out.println("\n");
+		}
+		
+	}
+	
+}
