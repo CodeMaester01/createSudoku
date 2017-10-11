@@ -1,0 +1,2 @@
+//Creating a double array to store values
+int grid[][] = new int[9][9];
